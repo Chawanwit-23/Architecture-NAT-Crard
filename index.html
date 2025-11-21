@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAT Architecture - Name Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* รีเซ็ตค่าพื้นฐาน */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        body {
+            background-color: #585752; /* สีพื้นหลัง */
+            color: white;
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        /* กล่องหลัก (Container) */
+        .main-container {
+            width: 100%;
+            max-width: 480px; /* จำกัดความกว้างให้เหมือนจอมือถือเมื่อเปิดบนคอม */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 60px; /* เว้นระยะด้านบนเพิ่มเพราะไม่มีไอคอนแล้ว */
+            position: relative;
+        }
+
+        /* ส่วนหัว */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .header p {
+            font-size: 16px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        /* ส่วนปุ่มกด */
+        .button-group {
+            width: 100%;
+            padding: 0 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            border: 1px solid white;
+            border-radius: 50px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            background-color: transparent;
+        }
+
+        .btn:hover {
+            background-color: white;
+            color: #585752; /* เอฟเฟกต์เมื่อเอาเมาส์ชี้ */
+            transform: translateY(-2px);
+        }
+
+        /* ส่วนแสดงรูปนามบัตร (สีขาวด้านล่าง) */
+        .card-section {
+            background-color: white;
+            width: 100%;
+            flex-grow: 1;
+            border-top-left-radius: 30px;
+            border-top-right-radius: 30px;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 25px;
+        }
+
+        /* สไตล์รูปภาพนามบัตร */
+        .business-card-img {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15); /* เงาสวยงาม */
+            object-fit: cover;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        
+        <div class="header">
+            <h1>Name Card</h1>
+            <p>Project Manager, Architectural designer</p>
+        </div>
+
+        <div class="button-group">
+            <a href="https://sites.google.com/view/architecture-nat/home" target="_blank" class="btn">Portfolio</a>
+            <a href="https://line.me/ti/p/~nattawut.nat" target="_blank" class="btn">Add LINE</a>
+        </div>
+
+        <div class="card-section">
+            <img src="imgs/Aesthetic Villanueva (1)_Page_1.jpg" alt="Front Card" class="business-card-img">
+            <img src="imgs/Aesthetic Villanueva (1)_Page_2.jpg" alt="Back Card" class="business-card-img">
+        </div>
+    </div>
+
+</body>
+</html>
